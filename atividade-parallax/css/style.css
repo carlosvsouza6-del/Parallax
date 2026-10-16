@@ -1,0 +1,110 @@
+/* Reset padrão de margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Source Sans 3', sans-serif;
+    background-color: #ffffff;
+    scroll-behavior: smooth; /* Torna a rolagem mais suave */
+}
+
+/* Configuração Principal do Efeito Parallax */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Define a altura das seções de imagem */
+    height: 65vh; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Camada escura sutil sobre as fotos para destacar os títulos brancos */
+.parallax::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+/* --- SEÇÃO CORRIGIDA: Caminhos diretos das imagens --- */
+.bg-natureza {
+    background-image: url('../img/natureza.jpg');
+}
+
+.bg-praias {
+    background-image: url('../img/praias.jpg');
+}
+
+.bg-montanhas {
+    background-image: url('../img/montanhas.jpg');
+}
+
+.bg-florestas {
+    background-image: url('../img/florestas.jpg');
+}
+
+/* Moldura Vazada do Título Central */
+.titulo-box {
+    position: relative; /* Fica por cima da camada escura */
+    border: 2px solid #ffffff;
+    padding: 15px 40px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.titulo-box h1 {
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* Estilização das Seções de Texto */
+.bloco-texto {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    text-align: justify;
+}
+
+.bloco-texto p {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.bloco-texto p:last-child {
+    margin-bottom: 0;
+}
+
+/* Botão de Voltar ao Topo no canto inferior direito */
+.btn-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333333;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 3px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    z-index: 100;
+}
+
+.btn-topo:hover {
+    opacity: 1;
+}
